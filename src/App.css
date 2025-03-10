@@ -1,0 +1,220 @@
+.App {
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 4s linear;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+button {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 5px 20px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 80px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.main {
+  text-shadow: 2px 2px gray;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(23, 45, 57, 0.5),
+    0px 8px 16px rgba(12, 22, 28, 0.3), 0px 16px 32px rgba(22, 160, 133, 0.2);
+  /* background: linear-gradient(135deg, #61bce0, #6aa2b3, #0ca9f1); */
+  /* background: linear-gradient(135deg, #2c3e50, #8e44ad, #000000); */
+  /* background: linear-gradient(135deg, #34495e, #16a085, #1f3b4d); */
+  background: linear-gradient(135deg, #4a90e2, #5fbbd6, #007aff);
+
+  color: #fff;
+  width: 350px;
+  margin: 10%;
+  border: 2px solid gray;
+  height: auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: 500px;
+  margin-top: 5%;
+}
+
+/* Header with logo and title */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.App-logo {
+  width: 30px;
+  height: 30px;
+}
+
+/* Location Input */
+.location-input {
+  width: 100%;
+  height: 25px;
+  font-size: 25px;
+  font-weight: 700;
+  color: gray;
+  text-align: center;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  outline: none;
+}
+
+.weather-info {
+  margin-top: 20px;
+}
+
+.weather-info h2 {
+  font-size: 22px;
+}
+
+.weather-info h3 {
+  font-size: 18px;
+}
+
+.weather-info p {
+  font-size: 16px;
+}
+
+.weather-info img {
+  margin-top: 10px;
+}
+
+.get-weather-button {
+  height: 40px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    #ff6f61,
+    #ff9c8d,
+    #ffbaba
+  ); 
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.get-weather-button:hover {
+  background: linear-gradient(
+    135deg,
+    #ffbaba,
+    #ff9c8d,
+    #ff6f61
+  ); /* Reverse gradient on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+/* Media Query for Mobile Devices */
+@media (max-width: 767px) {
+  .main {
+    width: 100%;  /* Make the container take the full width */
+    margin: 5%;    /* Reduce the margin */
+    margin-left: 0; /* Remove left margin */
+    margin-top: 10%; /* Adjust top margin */
+    padding: 15px; /* Reduce padding */
+    box-shadow: none; /* Remove box-shadow for mobile */
+  }
+
+  .header {
+    flex-direction: column; /* Stack the logo and title vertically */
+    align-items: center;
+  }
+
+  .App-logo {
+    width: 40px; /* Adjust logo size */
+    height: 40px;
+  }
+
+  .location-input {
+    width: 100%;
+    height: 35px;  /* Increase input field height for better usability */
+    font-size: 20px;
+    padding: 5px;
+     /* Add margin for spacing */
+  }
+
+  .get-weather-button {
+    font-size: 16px; /* Adjust button text size for mobile */
+    height: 50px; /* Make button taller for easier clicking */
+    padding: 10px;
+  }
+
+  .weather-info h2 {
+    font-size: 18px; /* Reduce font size */
+  }
+
+  .weather-info h3,
+  .weather-info p {
+    font-size: 14px; /* Reduce font size */
+  }
+
+  /* Adjust the button for mobile */
+  .get-weather-button {
+    width: 100%; /* Make button take full width */
+  }
+
+  /* Adjust the logo and header for mobile */
+  .App-logo {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* For very small screens like small phones */
+@media (max-width: 480px) {
+  .main {
+    padding: 10px;  /* Further reduce padding */
+     
+  }
+
+  .location-input {
+    height: 40px; /* Increase height of the input field for touch */
+    font-size: 18px;
+    width: 50%;
+  }
+
+  .get-weather-button {
+    font-size: 14px;  /* Further reduce font size */
+    height: 45px;
+    width: 50%;     /* Adjust button size */
+  }
+
+  .weather-info h2 {
+    font-size: 16px;  /* Adjust font size for small screens */
+  }
+
+  .weather-info h3,
+  .weather-info p {
+    font-size: 12px;  /* Adjust font size for small screens */
+  }
+}
